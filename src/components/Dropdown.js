@@ -13,11 +13,11 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
       setOpen(false);
     };
 
-    // document.body.addEventListener('click', onBodyClick);
+    document.body.addEventListener('click', onBodyClick);
 
-    // return () => {
-    //   document.body.removeEventListener('click', onBodyClick);
-    // };
+    return () => {
+      document.body.removeEventListener('click', onBodyClick);
+    };
   }, []);
 
   const renderedOptions = options.map((option) => {
@@ -53,6 +53,9 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
           </div>
         </div>
       </div>
+      <h1 style={{ color: selected.value }}>
+        This text color is {selected.value}!
+      </h1>
     </div>
   );
 };
