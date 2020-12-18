@@ -53,7 +53,6 @@ const Dropdown = ({ options, selected, onSelectedChange, label }) => {
           </div>
         </div>
       </div>
-      <h1></h1>
     </div>
   );
 };
